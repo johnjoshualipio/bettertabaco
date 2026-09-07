@@ -70,4 +70,24 @@
             </div>
         </div>
     </section>
+
+    <section class="civic-section" aria-labelledby="service-guides-title">
+        <div class="civic-container">
+            <x-civic.section-heading title="A better starting point for common needs." description="Some official service documents already contain useful details. These handpicked guides point you to them directly while keeping the responsibility for current requirements with the source office." />
+            <div class="civic-source-grid" id="service-guides-title">
+                @foreach (config('civic.service_guides') as $guide)
+                    <x-civic.card
+                        :title="$guide['title']"
+                        :description="$guide['description']"
+                        :href="config('civic.sources.' . $guide['href'])"
+                        :external="true"
+                        variant="source"
+                    >
+                        <span class="civic-source-label">{{ $guide['label'] }}</span>
+                    </x-civic.card>
+                @endforeach
+            </div>
+            <p class="civic-source-note">Source documents can be updated or replaced. Confirm fees, processing times, required documents, and office instructions before making a trip or payment.</p>
+        </div>
+    </section>
 </x-civic.layout>

@@ -14,6 +14,6 @@
     </div>
     <div class="civic-hotline-panel__source">
         <p>Last verified {{ config('civic.verified_on') }}.</p>
-        <a href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener">Verify against the official source <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+        <a href="{{ config('civic.sources.contact') }}" target="_blank" rel="noreferrer noopener">Verify against the official source <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
     </div>
 </aside>

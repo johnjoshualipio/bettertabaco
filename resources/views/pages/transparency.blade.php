@@ -64,4 +64,30 @@
             </div>
         </div>
     </section>
+
+    <section class="civic-section" aria-labelledby="record-reading-title">
+        <div class="civic-container civic-split-copy">
+            <div>
+                <x-civic.section-heading title="How to use a public record." description="A link is only the beginning. The source, date, document type, and original context are what make a record useful." />
+            </div>
+            <div class="civic-link-stack" id="record-reading-title">
+                <div><strong>1. Start with the original source</strong><span class="text-right text-sm font-normal text-ink-soft">Open the government page or document, not just a summary.</span></div>
+                <div><strong>2. Keep the date attached</strong><span class="text-right text-sm font-normal text-ink-soft">Budgets, projects, ordinances, and contact details can change.</span></div>
+                <div><strong>3. Read the document type</strong><span class="text-right text-sm font-normal text-ink-soft">A notice, award, ordinance, audit report, and form answer different questions.</span></div>
+                <div><strong>4. Ask for the next source</strong><span class="text-right text-sm font-normal text-ink-soft">When a page points elsewhere, follow the chain to the record that supports the claim.</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="civic-section civic-section--tint" aria-labelledby="transparency-sources-title">
+        <div class="civic-container">
+            <x-civic.section-heading title="Reference links for public information." description="These are the public sources BetterTabaco uses as starting points for the transparency guide." />
+            <div class="civic-inline-sources" id="transparency-sources-title">
+                <a href="{{ config('civic.sources.disclosure') }}" target="_blank" rel="noreferrer noopener">Full Disclosure <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                <a href="{{ config('civic.sources.procurement') }}" target="_blank" rel="noreferrer noopener">Bids and Awards <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                <a href="{{ config('civic.sources.ordinances') }}" target="_blank" rel="noreferrer noopener">Ordinances <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                <a href="{{ config('civic.sources.cityhood') }}" target="_blank" rel="noreferrer noopener">City charter <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+            </div>
+        </div>
+    </section>
 </x-civic.layout>

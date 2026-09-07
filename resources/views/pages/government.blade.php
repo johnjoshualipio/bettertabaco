@@ -60,4 +60,17 @@
             </div>
         </div>
     </section>
+
+    <section class="civic-section" aria-labelledby="city-government-context-title">
+        <div class="civic-container civic-split-copy">
+            <div>
+                <x-civic.section-heading title="A city government with a public charter." description="Republic Act No. 9020 describes the offices, powers, and responsibilities that make up the City of Tabaco as a component city." />
+            </div>
+            <div id="city-government-context-title" class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
+                <p>The charter names core city offices such as the mayor, vice mayor, Sangguniang Panlungsod, treasurer, assessor, accountant, budget, planning, engineering, health, civil registrar, social welfare, agriculture, environment, and general services.</p>
+                <p>That legal structure is useful context, but it is not a substitute for the current directory. Office names, heads, locations, and contact details should always be checked against the official city source.</p>
+                <a class="civic-text-link" href="{{ config('civic.sources.cityhood') }}" target="_blank" rel="noreferrer noopener">Read Republic Act No. 9020 on Lawphil <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+            </div>
+        </div>
+    </section>
 </x-civic.layout>

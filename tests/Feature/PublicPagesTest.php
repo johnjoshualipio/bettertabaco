@@ -1,7 +1,7 @@
 <?php
 
 it('renders every public page with the shared civic shell', function () {
-    foreach (['home', 'services', 'government', 'transparency', 'barangays', 'city-data', 'about', 'contact'] as $route) {
+    foreach (['home', 'services', 'government', 'transparency', 'barangays', 'city-data', 'about', 'history', 'tabak-festival', 'contact'] as $route) {
         $response = $this->get(route($route));
 
         $response
@@ -105,6 +105,23 @@ it('renders dated city data and the about page source-backed stories', function 
         ->assertSee('Coastal identity', false)
         ->assertSee('San Miguel Island', false)
         ->assertSee('Tabak Festival', false)
+        ->assertSee('https://tabacocity.com.ph/tourism/', false);
+});
+
+it('renders source-backed history and Tabak Festival pages', function () {
+    $historyResponse = $this->get(route('history'));
+    $festivalResponse = $this->get(route('tabak-festival'));
+
+    $historyResponse
+        ->assertSee('A documented timeline.', false)
+        ->assertSee('Bagiong Oguis', false)
+        ->assertSee('Republic Act No. 9020', false)
+        ->assertSee('https://lawphil.net/statutes/repacts/ra2001/ra_9020_2001.html', false);
+
+    $festivalResponse
+        ->assertSee('A celebration with a documented beginning.', false)
+        ->assertSee('Padyak and Sibidan races', false)
+        ->assertSee('Tabaco City official tourism page', false)
         ->assertSee('https://tabacocity.com.ph/tourism/', false);
 });
 

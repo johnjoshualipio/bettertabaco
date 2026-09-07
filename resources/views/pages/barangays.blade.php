@@ -36,6 +36,7 @@
                     <div class="civic-barangay-item"><span>{{ str_pad((string) ($loop->iteration), 2, '0', STR_PAD_LEFT) }}</span><strong>{{ $barangay }}</strong></div>
                 @endforeach
             </div>
+            <p class="civic-source-note">Names, urban-rural counts, and the San Miguel Island grouping are taken from the <a href="{{ config('civic.sources.profile') }}" target="_blank" rel="noreferrer noopener">official city profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>. The BetterTabaco list is an orientation aid, not a replacement for official barangay records.</p>
         </div>
     </section>
 
@@ -48,6 +49,22 @@
         </div>
         <div class="civic-feature__image-wrap">
             <img src="{{ asset(ltrim($images['island'], '/')) }}" alt="San Miguel Island coastal landscape" width="1536" height="1024" loading="lazy" decoding="async">
+        </div>
+    </section>
+
+    <section class="civic-section civic-section--tint" aria-labelledby="barangay-context-title">
+        <div class="civic-container civic-split-copy">
+            <div>
+                <x-civic.section-heading title="A directory that should grow carefully." description="A barangay name is only the first layer of useful public information." />
+            </div>
+            <div id="barangay-context-title" class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
+                <p>Future profiles can add public facilities, services, geography, population, and official contact channels when each item has a clear source and verification date.</p>
+                <p>For now, use the city profile for the full political subdivision context and the official city website for current notices or public transactions.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a class="civic-text-link" href="{{ config('civic.sources.profile') }}" target="_blank" rel="noreferrer noopener">Open the official profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                    <a class="civic-text-link" href="{{ config('civic.sources.official') }}" target="_blank" rel="noreferrer noopener">Open the city website <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                </div>
+            </div>
         </div>
     </section>
 </x-civic.layout>

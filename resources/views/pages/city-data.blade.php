@@ -1,5 +1,6 @@
 @php
     $facts = config('civic.facts');
+    $profileFacts = config('civic.city_profile_facts');
     $images = config('civic.images');
 @endphp
 
@@ -47,6 +48,23 @@
                 <a href="{{ config('civic.sources.psa_population') }}" target="_blank" rel="noreferrer noopener">PSA 2024 Albay Census <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.psa_classification') }}" target="_blank" rel="noreferrer noopener">PSA PSGC city data <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.profile') }}" target="_blank" rel="noreferrer noopener">Tabaco City official profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="civic-section civic-section--tint" aria-labelledby="city-profile-facts-title">
+        <div class="civic-container">
+            <x-civic.section-heading title="The city behind the numbers." description="Population counts are only one way to understand Tabaco. The city charter and official profile add legal, geographic, and community context." />
+            <div class="civic-stat-grid" id="city-profile-facts-title">
+                @foreach ($profileFacts as $fact)
+                    <article class="civic-stat">
+                        <x-civic.icon :name="$fact['icon']" class="size-8 text-sea" />
+                        <strong>{{ $fact['value'] }}</strong>
+                        <h2>{{ $fact['label'] }}</h2>
+                        <p>{{ $fact['note'] }}</p>
+                        <a class="civic-text-link mt-auto pt-4" href="{{ config('civic.sources.' . $fact['source']) }}" target="_blank" rel="noreferrer noopener">Open source <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                    </article>
+                @endforeach
             </div>
         </div>
     </section>

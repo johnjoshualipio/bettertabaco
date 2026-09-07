@@ -105,6 +105,23 @@
         </div>
     </section>
 
+    <section class="civic-section civic-section--tint" aria-labelledby="local-context-title">
+        <div class="civic-container">
+            <x-civic.section-heading title="Start with the local context." description="Good civic information needs a sense of place. These short guides connect current services and records to Tabaco City's history, geography, and culture." />
+            <div class="civic-source-grid" id="local-context-title">
+                <x-civic.card title="History of Tabaco City" description="Follow the city's documented milestones, cityhood, and the stories that continue to shape local identity." href="{{ route('history') }}" variant="source">
+                    <span class="civic-source-label">Read the local history guide</span>
+                </x-civic.card>
+                <x-civic.card title="Tabak Festival" description="Learn how street dancing, craft, coastal traditions, and community celebrations come together each year." href="{{ route('tabak-festival') }}" variant="source">
+                    <span class="civic-source-label">Explore the cultural guide</span>
+                </x-civic.card>
+                <x-civic.card title="Official city sources" description="Use the original government, PSA, and public-record pages when you need the current document or transaction." href="{{ config('civic.sources.official') }}" :external="true" variant="source">
+                    <span class="civic-source-label">Open the official website</span>
+                </x-civic.card>
+            </div>
+        </div>
+    </section>
+
     <section class="civic-section civic-section--closing" aria-labelledby="closing-title">
         <div class="civic-container civic-closing">
             <div>

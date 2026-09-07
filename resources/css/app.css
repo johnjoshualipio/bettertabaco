@@ -1115,6 +1115,7 @@
     }
 
     .civic-link-stack a,
+    .civic-link-stack > div,
     .civic-data-notes__list > div {
         display: flex;
         align-items: center;
@@ -1124,6 +1125,10 @@
         padding: 1.2rem 0;
         color: var(--color-midnight);
         font-weight: 700;
+    }
+
+    .civic-link-stack > div {
+        color: var(--color-midnight);
     }
 
     .civic-link-stack a:hover {
@@ -1216,6 +1221,40 @@
         font-weight: 400;
         line-height: 1.5;
         text-align: right;
+    }
+
+    .civic-timeline {
+        margin-top: 3.5rem;
+        border-top: 2px solid var(--color-sea);
+    }
+
+    .civic-timeline__item {
+        display: grid;
+        grid-template-columns: 8rem minmax(0, 1fr);
+        gap: 2rem;
+        border-bottom: 1px solid var(--color-line);
+        padding: 1.5rem 0;
+    }
+
+    .civic-timeline__year {
+        color: var(--color-sea);
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+    }
+
+    .civic-timeline__item h2 {
+        color: var(--color-midnight);
+        font-size: 1.15rem;
+        font-weight: 700;
+    }
+
+    .civic-timeline__item p {
+        max-width: 52rem;
+        margin-top: 0.45rem;
+        color: var(--color-ink-soft);
+        font-size: 0.9rem;
+        line-height: 1.7;
     }
 
     .civic-data-band {
@@ -1964,6 +2003,11 @@
 
     .civic-how-it-works__steps {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .civic-timeline__item {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.5rem;
     }
 
     .civic-how-it-works__steps > div,

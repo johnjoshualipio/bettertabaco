@@ -33,6 +33,8 @@
                 @foreach (config('civic.navigation') as $item)
                     <a href="{{ route($item['route']) }}">{{ $item['label'] }}</a>
                 @endforeach
+                <a href="{{ route('history') }}">History of Tabaco City</a>
+                <a href="{{ route('tabak-festival') }}">Tabak Festival</a>
             </nav>
         </div>
 
@@ -44,6 +46,8 @@
                 <a href="{{ config('civic.sources.boss') }}" target="_blank" rel="noreferrer noopener">Business One Stop Shop <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.disclosure') }}" target="_blank" rel="noreferrer noopener">Full Disclosure <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.forms') }}" target="_blank" rel="noreferrer noopener">Downloadable Forms <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                <a href="{{ config('civic.sources.psa_population') }}" target="_blank" rel="noreferrer noopener">PSA population data <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                <a href="{{ config('civic.sources.cityhood') }}" target="_blank" rel="noreferrer noopener">Republic Act No. 9020 <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.bettergov') }}" target="_blank" rel="noreferrer noopener">BetterGov.ph <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
             </nav>
         </div>

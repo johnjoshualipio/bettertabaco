@@ -14,8 +14,8 @@
         image-alt="Historic heritage church and civic street in Tabaco City"
     >
         <div class="mt-8 flex flex-wrap gap-3">
-            <x-civic.cta href="{{ config('civic.sources.about') }}" variant="green" :external="true">Read the official background</x-civic.cta>
-            <x-civic.cta href="{{ config('civic.sources.tourism') }}" variant="outline" :external="true">Explore official tourism</x-civic.cta>
+            <x-civic.cta href="{{ route('history') }}" variant="green">Read the city history</x-civic.cta>
+            <x-civic.cta href="{{ route('tabak-festival') }}" variant="outline">Explore Tabak Festival</x-civic.cta>
         </div>
     </x-civic.page-hero>
 
@@ -36,6 +36,7 @@
                     <div><h2>Coastal identity</h2><p>Fishing communities on the mainland and San Miguel Island connect Tabaco City’s daily life to the sea.</p><a href="{{ config('civic.sources.profile') }}" target="_blank" rel="noreferrer noopener">Learn about the city’s profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a></div>
                 </article>
             </div>
+            <p class="civic-source-note">These introductions are editorial summaries. Compare them with the <a href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener">official history <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>, <a href="{{ config('civic.sources.profile') }}" target="_blank" rel="noreferrer noopener">city profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>, and <a href="{{ config('civic.sources.business_profile') }}" target="_blank" rel="noreferrer noopener">business profile <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>.</p>
         </div>
     </section>
 
@@ -46,8 +47,11 @@
         <div class="civic-feature__content">
             <div class="civic-rule civic-rule--light" aria-hidden="true"></div>
             <h2 id="about-festival-title">Tabak <span>Festival</span></h2>
-            <p>The Tabak Festival began in 2002 and celebrates Tabaknon identity through street dancing, cultural performances, trade fairs, and coastal traditions such as the Sibidan race.</p>
-            <x-civic.cta href="{{ config('civic.sources.tourism') }}" variant="outline" class="civic-cta--light-border" :external="true">Visit the official tourism page</x-civic.cta>
+            <p>The Tabak Festival began in 2002 and brings together street dancing, cultural performances, trade fairs, and coastal traditions such as the Sibidan race. Read the dedicated page for the documented program and source notes.</p>
+            <div class="mt-5 flex flex-wrap gap-3">
+                <x-civic.cta href="{{ route('tabak-festival') }}" variant="outline" class="civic-cta--light-border">Read the Tabak Festival page</x-civic.cta>
+                <x-civic.cta href="{{ config('civic.sources.tourism') }}" variant="outline" class="civic-cta--light-border" :external="true">Visit official tourism</x-civic.cta>
+            </div>
         </div>
     </section>
 
