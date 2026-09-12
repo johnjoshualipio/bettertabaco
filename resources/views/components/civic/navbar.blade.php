@@ -28,9 +28,8 @@
         </nav>
 
         <div class="civic-navbar__actions">
-            <x-civic.cta href="{{ config('civic.official_site') }}" variant="green" :external="true" class="civic-cta--official">
-                <span class="hidden xl:inline">Official City Website</span>
-                <span class="xl:hidden">Official site</span>
+            <x-civic.cta href="{{ config('civic.official_site') }}" variant="green" :external="true" class="civic-cta--official" aria-label="Explore the official Tabaco City website">
+                Explore
             </x-civic.cta>
 
             <details class="civic-mobile-menu">
@@ -48,7 +47,7 @@
                             {{ $item['label'] }}
                         </a>
                     @endforeach
-                    <a href="{{ config('civic.official_site') }}" class="civic-mobile-menu__link" target="_blank" rel="noreferrer noopener">Official City Website <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
+                    <a href="{{ config('civic.official_site') }}" class="civic-mobile-menu__link" target="_blank" rel="noreferrer noopener">Explore official city website <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 </nav>
             </details>
         </div>

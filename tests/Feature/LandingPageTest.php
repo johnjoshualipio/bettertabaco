@@ -11,7 +11,7 @@ it('renders the BetterTabaco homepage with civic navigation and source attributi
         ->assertSee('City information, within reach.', false)
         ->assertSee('Emergency hotlines', false)
         ->assertSee('https://tabacocity.com.ph/', false)
-        ->assertSee('https://tabacocity.com.ph/citizens-charter/', false)
+        ->assertSee('https://citcha.tabacocity.com.ph/', false)
         ->assertSee('https://www.boss.tabacocity.com.ph/', false)
         ->assertSee('tel:+630525581602', false)
         ->assertSee('tel:+630524874432', false)

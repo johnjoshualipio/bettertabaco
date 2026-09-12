@@ -65,7 +65,7 @@
                 <x-civic.section-heading title="The name of Tabaco: record and legend." description="A local story can matter without being presented as proven etymology." />
             </div>
             <div id="name-story-title" class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
-                <p>The City Government's history page shares a popular legend in which the words “Tabak ko!”—“my bolo”—were misunderstood by Spanish visitors and became the city's name.</p>
+                <p>The City Government's history page shares a popular legend: Spanish visitors misunderstood the words “Tabak ko!” (“my bolo”), and the phrase became the city's name.</p>
                 <p>That account is presented here as oral tradition and local folklore. It is part of how Tabaco explains its identity, but it is not treated as a conclusive historical proof of the name's origin.</p>
                 <a class="civic-text-link" href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener">Read the source and its other versions of the story <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
             </div>

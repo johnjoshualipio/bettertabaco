@@ -25,6 +25,7 @@ it('renders the home page with an honest directory state and source-backed facts
         ->assertSee('Directory search is coming soon.', false)
         ->assertSee('Find a service', false)
         ->assertSee('Explore public records', false)
+        ->assertSee('Explore the official Tabaco City website', false)
         ->assertSee('140,779', false)
         ->assertSee('2024 POPCEN · PSA', false)
         ->assertSee('47', false)
@@ -45,7 +46,9 @@ it('renders supported services and verified hotline links', function () {
         ->assertSee('Health services', false)
         ->assertSee('Social welfare', false)
         ->assertSee('Employment services', false)
-        ->assertSee('https://tabacocity.com.ph/citizens-charter/', false)
+        ->assertSee('https://gad.tabacocity.com.ph/', false)
+        ->assertSee('https://kiosks.tabacocity.com.ph/', false)
+        ->assertSee('https://citcha.tabacocity.com.ph/', false)
         ->assertSee('tel:+630525581602', false)
         ->assertSee('tel:+630524874432', false)
         ->assertSee('tel:+630527327527', false)
@@ -56,16 +59,22 @@ it('renders the transparency destinations and public data links', function () {
     $response = $this->get(route('transparency'));
 
     $response
-        ->assertSee('Transparency, made easier to follow.', false)
+        ->assertSee('Public records, made easier to follow.', false)
         ->assertSee('Budget and finance', false)
         ->assertSee('Procurement', false)
         ->assertSee('Projects', false)
         ->assertSee('Ordinances', false)
         ->assertSee('Public documents', false)
+        ->assertSee('These summaries are maintained here as static information.', false)
+        ->assertSee('References.', false)
+        ->assertSee('<article', false)
+        ->assertSee('https://tabacocity.com.ph/bids-and-awards-committee/', false)
         ->assertSee('https://tabacocity.com.ph/business/bids-and-awards/', false)
         ->assertSee('https://tabacocity.com.ph/announcements/ordinances/', false)
         ->assertSee('https://tabacocity.com.ph/online-reports/full-disclosure/', false)
         ->assertSee('https://tabacocity.com.ph/online-reports/downloadable-forms/', false)
+        ->assertSee('https://gad.tabacocity.com.ph/', false)
+        ->assertSee('https://kiosks.tabacocity.com.ph/', false)
         ->assertSee('Tabaco City at a glance.', false);
 });
 
@@ -116,6 +125,8 @@ it('renders source-backed history and Tabak Festival pages', function () {
         ->assertSee('A documented timeline.', false)
         ->assertSee('Bagiong Oguis', false)
         ->assertSee('Republic Act No. 9020', false)
+        ->assertSee('Tabak ko!', false)
+        ->assertDontSee('—', false)
         ->assertSee('https://lawphil.net/statutes/repacts/ra2001/ra_9020_2001.html', false);
 
     $festivalResponse
