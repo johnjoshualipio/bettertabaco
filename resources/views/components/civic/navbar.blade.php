@@ -34,7 +34,7 @@
 
             <details class="civic-mobile-menu">
                 <summary class="civic-mobile-menu__toggle">
-                    <span class="sr-only">Open navigation</span>
+                    <span class="sr-only">Navigation menu</span>
                     <span aria-hidden="true" class="civic-mobile-menu__bars"><span></span><span></span></span>
                 </summary>
                 <nav aria-label="Mobile navigation" class="civic-mobile-menu__panel">

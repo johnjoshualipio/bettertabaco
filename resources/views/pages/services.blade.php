@@ -23,8 +23,8 @@
     <section class="civic-section civic-section--services" aria-labelledby="service-list-title">
         <div class="civic-container civic-services-layout">
             <div>
-                <x-civic.section-heading title="Start with what you need." description="These categories are a practical guide. Requirements, fees, and processing times belong to the official source linked from each service." />
-                <div class="civic-service-list" id="service-list-title">
+                <x-civic.section-heading heading-id="service-list-title" title="Start with what you need." description="These categories are a practical guide. Requirements, fees, and processing times belong to the official source linked from each service." />
+                <div class="civic-service-list">
                     @foreach ($services as $service)
                         <x-civic.card
                             :title="$service['title']"
@@ -46,8 +46,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="online-services-title">
         <div class="civic-container">
-            <x-civic.section-heading title="Official online services." description="Go directly to official government portals for online applications, policies, and public information." />
-            <div class="civic-source-grid" id="online-services-title">
+            <x-civic.section-heading heading-id="online-services-title" title="Official online services." description="Go directly to official government portals for online applications, policies, and public information." />
+            <div class="civic-source-grid">
                 @foreach ($onlineServices as $service)
                     <x-civic.card
                         :title="$service['title']"
@@ -73,8 +73,8 @@
 
     <section class="civic-section" aria-labelledby="service-guides-title">
         <div class="civic-container">
-            <x-civic.section-heading title="A better starting point for common needs." description="Some official service documents already contain useful details. These handpicked guides point you to them directly while keeping the responsibility for current requirements with the source office." />
-            <div class="civic-source-grid" id="service-guides-title">
+            <x-civic.section-heading heading-id="service-guides-title" title="A better starting point for common needs." description="Some official service documents already contain useful details. These handpicked guides point you to them directly while keeping the responsibility for current requirements with the source office." />
+            <div class="civic-source-grid">
                 @foreach (config('civic.service_guides') as $guide)
                     <x-civic.card
                         :title="$guide['title']"

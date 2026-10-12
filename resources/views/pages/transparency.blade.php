@@ -23,7 +23,7 @@
 
     <section class="civic-section" aria-labelledby="records-heading">
         <div class="civic-container">
-            <x-civic.section-heading id="records-heading" title="Public records at a glance." description="These summaries are maintained here as static information. The References section links to original government pages for current notices and documents." />
+            <x-civic.section-heading heading-id="records-heading" title="Public records at a glance." description="These summaries are maintained here as static information. The References section links to original government pages for current notices and documents." />
             <div class="civic-record-grid" id="records-title">
                 @foreach ($records as $record)
                     <x-civic.card
@@ -40,9 +40,9 @@
     <section class="civic-section civic-section--tint" aria-labelledby="glance-title">
         <div class="civic-container civic-glance">
             <div>
-                <x-civic.section-heading title="Tabaco City at a glance." description="Key facts for a more informed and engaged community, with dates and sources kept visible." />
+                <x-civic.section-heading heading-id="glance-title" title="Tabaco City at a glance." description="Key facts for a more informed and engaged community, with dates and sources kept visible." />
             </div>
-            <div class="civic-glance__facts" id="glance-title">
+            <div class="civic-glance__facts">
                 @foreach ($facts as $fact)
                     <div class="civic-glance__fact">
                         <x-civic.icon :name="$fact['icon']" class="size-7 text-sea" />
@@ -58,9 +58,9 @@
     <section class="civic-section" aria-labelledby="record-reading-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="How to use a public record." description="A link is only the beginning. The source, date, document type, and original context are what make a record useful." />
+                <x-civic.section-heading heading-id="record-reading-title" title="How to use a public record." description="A link is only the beginning. The source, date, document type, and original context are what make a record useful." />
             </div>
-            <div class="civic-link-stack" id="record-reading-title">
+            <div class="civic-link-stack">
                 <div><strong>1. Start with the original source</strong><span class="text-right text-sm font-normal text-ink-soft">Open the government page or document, not just a summary.</span></div>
                 <div><strong>2. Keep the date attached</strong><span class="text-right text-sm font-normal text-ink-soft">Budgets, projects, ordinances, and contact details can change.</span></div>
                 <div><strong>3. Read the document type</strong><span class="text-right text-sm font-normal text-ink-soft">A notice, award, ordinance, audit report, and form answer different questions.</span></div>
@@ -71,8 +71,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="transparency-sources-title">
         <div class="civic-container">
-            <x-civic.section-heading title="References." description="The guide above is static. Use these external links for original government records and current information." />
-            <div class="civic-inline-sources" id="transparency-sources-title">
+            <x-civic.section-heading heading-id="transparency-sources-title" title="References." description="The guide above is static. Use these external links for original government records and current information." />
+            <div class="civic-inline-sources">
                 @foreach ($references as $reference)
                     <a href="{{ config('civic.sources.' . $reference['source']) }}" target="_blank" rel="noreferrer noopener">
                         {{ $reference['title'] }} <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" />

@@ -18,8 +18,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="city-facts-title">
         <div class="civic-container">
-            <x-civic.section-heading title="Tabaco City at a glance." description="Current population and classification data come from Philippine Statistics Authority sources; barangay counts come from the official city profile." />
-            <div class="civic-stat-grid" id="city-facts-title">
+            <x-civic.section-heading heading-id="city-facts-title" title="Tabaco City at a glance." description="Current population and classification data come from Philippine Statistics Authority sources; barangay counts come from the official city profile." />
+            <div class="civic-stat-grid">
                 @foreach ($facts as $fact)
                     <article class="civic-stat">
                         <x-civic.icon :name="$fact['icon']" class="size-8 text-sea" />
@@ -35,9 +35,9 @@
     <section class="civic-section" aria-labelledby="data-notes-title">
         <div class="civic-container civic-data-notes">
             <div>
-                <x-civic.section-heading title="What the dates mean." description="Population values should be read with their census year. A newer count does not replace the record of an earlier census; it gives the city a more current reference point." />
+                <x-civic.section-heading heading-id="data-notes-title" title="What the dates mean." description="Population values should be read with their census year. A newer count does not replace the record of an earlier census; it gives the city a more current reference point." />
             </div>
-            <div class="civic-data-notes__list" id="data-notes-title">
+            <div class="civic-data-notes__list">
                 <div><strong>140,779</strong><span>2024 POPCEN · latest population used here</span></div>
                 <div><strong>140,961</strong><span>2020 Census · historical comparison</span></div>
                 <div><strong>47</strong><span>barangays · official city profile</span></div>
@@ -54,8 +54,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="city-profile-facts-title">
         <div class="civic-container">
-            <x-civic.section-heading title="The city behind the numbers." description="Population counts are only one way to understand Tabaco. The city charter and official profile add legal, geographic, and community context." />
-            <div class="civic-stat-grid" id="city-profile-facts-title">
+            <x-civic.section-heading heading-id="city-profile-facts-title" title="The city behind the numbers." description="Population counts are only one way to understand Tabaco. The city charter and official profile add legal, geographic, and community context." />
+            <div class="civic-stat-grid">
                 @foreach ($profileFacts as $fact)
                     <article class="civic-stat">
                         <x-civic.icon :name="$fact['icon']" class="size-8 text-sea" />

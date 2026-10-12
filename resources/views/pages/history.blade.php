@@ -21,11 +21,11 @@
 
     <section class="civic-section" aria-labelledby="history-timeline-title">
         <div class="civic-container">
-            <x-civic.section-heading
+            <x-civic.section-heading heading-id="history-timeline-title"
                 title="A documented timeline."
                 description="These milestones are drawn from the City Government's official history page and Republic Act No. 9020, the charter that converted Tabaco into a component city."
             />
-            <div class="civic-timeline" id="history-timeline-title">
+            <div class="civic-timeline">
                 <article class="civic-timeline__item">
                     <span class="civic-timeline__year">1587</span>
                     <div>
@@ -62,9 +62,9 @@
     <section class="civic-section civic-section--tint" aria-labelledby="name-story-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="The name of Tabaco: record and legend." description="A local story can matter without being presented as proven etymology." />
+                <x-civic.section-heading heading-id="name-story-title" title="The name of Tabaco: record and legend." description="A local story can matter without being presented as proven etymology." />
             </div>
-            <div id="name-story-title" class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
+            <div class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
                 <p>The City Government's history page shares a popular legend: Spanish visitors misunderstood the words “Tabak ko!” (“my bolo”), and the phrase became the city's name.</p>
                 <p>That account is presented here as oral tradition and local folklore. It is part of how Tabaco explains its identity, but it is not treated as a conclusive historical proof of the name's origin.</p>
                 <a class="civic-text-link" href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener">Read the source and its other versions of the story <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
@@ -74,11 +74,11 @@
 
     <section class="civic-section" aria-labelledby="place-and-practice-title">
         <div class="civic-container">
-            <x-civic.section-heading
+            <x-civic.section-heading heading-id="place-and-practice-title"
                 title="Place, craft, and working life."
                 description="Official city background materials describe Tabaco through both its geography and the skills of its people."
             />
-            <div class="civic-source-grid" id="place-and-practice-title">
+            <div class="civic-source-grid">
                 <x-civic.card title="Blacksmithing and cutlery" description="The city's business profile identifies blacksmiths and the handmade tabak and gunting cutlery tradition among Tabaco's skilled industries." :href="config('civic.sources.business_profile')" :external="true" variant="source">
                     <span class="civic-source-label">Official business profile</span>
                 </x-civic.card>
