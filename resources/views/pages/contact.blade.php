@@ -21,8 +21,8 @@
     <section class="civic-section" aria-labelledby="contact-hotlines-title">
         <div class="civic-container civic-contact-layout">
             <div>
-                <x-civic.section-heading title="Verified city hotlines." description="Numbers below are transcribed from the official Tabaco City website and were last checked on September 6, 2026." />
-                <div class="civic-contact-list" id="contact-hotlines-title">
+                <x-civic.section-heading heading-id="contact-hotlines-title" title="Verified city hotlines." description="Numbers below are transcribed from the official Tabaco City website and were last checked on September 6, 2026." />
+                <div class="civic-contact-list">
                     @foreach (config('civic.hotlines') as $hotline)
                         <a href="tel:{{ $hotline['tel'] }}" class="civic-contact-row"><span><strong>{{ $hotline['name'] }}</strong><small>{{ $hotline['display'] }}</small></span><span class="civic-contact-row__icon" aria-hidden="true"><x-civic.icon name="phone" class="size-4" /></span></a>
                     @endforeach
@@ -41,9 +41,9 @@
     <section id="contribute" class="civic-section civic-section--tint scroll-mt-24" aria-labelledby="contribute-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="Help keep the guide accurate." description="If you spot an outdated link or have an official source we should include, a correction helps future readers." />
+                <x-civic.section-heading heading-id="contribute-title" title="Help keep the guide accurate." description="If you spot an outdated link or have an official source we should include, a correction helps future readers." />
             </div>
-            <div class="civic-link-stack" id="contribute-title">
+            <div class="civic-link-stack">
                 <a href="{{ config('civic.sources.official') }}" target="_blank" rel="noreferrer noopener"><span>Check the official city website first</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.contact') }}" target="_blank" rel="noreferrer noopener"><span>Use official contact channels</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.bettergov') }}" target="_blank" rel="noreferrer noopener"><span>Explore BetterGov.ph</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
@@ -54,9 +54,9 @@
     <section class="civic-section" aria-labelledby="contact-next-step-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="A simple next-step guide." description="The fastest way to get help is to match the question to the office that owns the answer." />
+                <x-civic.section-heading heading-id="contact-next-step-title" title="A simple next-step guide." description="The fastest way to get help is to match the question to the office that owns the answer." />
             </div>
-            <div class="civic-link-stack" id="contact-next-step-title">
+            <div class="civic-link-stack">
                 <div><strong>Emergency or immediate danger</strong><span class="text-right text-sm font-normal text-ink-soft">Call the appropriate verified hotline above.</span></div>
                 <div><strong>City transaction or application</strong><span class="text-right text-sm font-normal text-ink-soft">Use the official city website, Citizen's Charter, or responsible office.</span></div>
                 <div><strong>Outdated information on this guide</strong><span class="text-right text-sm font-normal text-ink-soft">Check the official source, then send a correction through the project channels.</span></div>

@@ -59,8 +59,9 @@
     }
 
     :focus-visible {
-        outline: 3px solid var(--color-gold);
+        outline: 3px solid var(--color-blue-deep);
         outline-offset: 4px;
+        box-shadow: 0 0 0 4px var(--color-white);
     }
 
     summary {
@@ -145,6 +146,7 @@
 
     .civic-emergency-bar__link {
         flex: 0 0 auto;
+        min-height: 44px;
         padding: 0.15rem 0.9rem;
         border-left: 1px solid rgb(255 255 255 / 0.28);
         color: rgb(255 255 255 / 0.88);
@@ -249,6 +251,7 @@
 
     .civic-cta {
         display: inline-flex;
+        max-width: 100%;
         min-height: 3rem;
         align-items: center;
         justify-content: center;
@@ -342,6 +345,8 @@
         display: flex;
         width: min(18rem, calc(100vw - 2rem));
         flex-direction: column;
+        max-height: calc(100dvh - 12rem);
+        overflow-y: auto;
         border: 1px solid var(--color-line);
         background: white;
         padding: 0.5rem;
@@ -1694,7 +1699,7 @@
         gap: 1rem;
         border-top: 1px solid rgb(255 255 255 / 0.16);
         padding: 1rem 0 1.4rem;
-        color: rgb(255 255 255 / 0.46);
+        color: rgb(255 255 255 / 0.65);
         font-size: 0.7rem;
         line-height: 1.5;
     }
@@ -1813,7 +1818,7 @@
     }
 
     .civic-cta--official {
-        min-height: 2.6rem;
+        min-height: 44px;
         padding-inline: 0.65rem;
         font-size: 0.68rem;
     }
@@ -1945,6 +1950,11 @@
         gap: 2.5rem;
     }
 
+    .civic-closing {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .civic-source-grid,
     .civic-record-grid {
         gap: 0;
@@ -2043,10 +2053,20 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
+    html {
+        scroll-behavior: auto;
+    }
+
+    .civic-cta,
+    .civic-card,
+    .civic-card__arrow,
+    .skip-link {
+        transition: none;
+    }
+
+    .civic-cta:hover,
+    .civic-card:hover,
+    .civic-card:hover .civic-card__arrow {
+        transform: none;
     }
 }

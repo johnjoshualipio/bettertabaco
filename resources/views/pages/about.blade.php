@@ -21,8 +21,8 @@
 
     <section class="civic-section" aria-labelledby="about-the-city-title">
         <div class="civic-container">
-            <x-civic.section-heading title="The places and practices that make Tabaco City." description="These short introductions point to documented parts of the city story. Follow the official sources for fuller historical and cultural context." />
-            <div class="civic-story-grid" id="about-the-city-title">
+            <x-civic.section-heading heading-id="about-the-city-title" title="The places and practices that make Tabaco City." description="These short introductions point to documented parts of the city story. Follow the official sources for fuller historical and cultural context." />
+            <div class="civic-story-grid">
                 <article class="civic-story-card civic-story-card--wide">
                     <img src="{{ asset(ltrim($images['history'], '/')) }}" alt="Historic church and civic street in Tabaco City" width="1536" height="1024" loading="lazy" decoding="async">
                     <div><h2>History</h2><p>Tabaco City’s official history traces the community from its early settlement and church history through the events that shaped the city and Albay.</p><a href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener">Read the official history <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a></div>
@@ -58,9 +58,9 @@
     <section class="civic-section civic-section--tint" aria-labelledby="how-it-works-title">
         <div class="civic-container civic-how-it-works">
             <div>
-                <x-civic.section-heading title="How BetterTabaco works." description="A civic portal is useful when it makes the next step clear and stays honest about who owns the information." />
+                <x-civic.section-heading heading-id="how-it-works-title" title="How BetterTabaco works." description="A civic portal is useful when it makes the next step clear and stays honest about who owns the information." />
             </div>
-            <div class="civic-how-it-works__steps" id="how-it-works-title">
+            <div class="civic-how-it-works__steps">
                 <div><span>1</span><h2>Find information</h2><p>Start with plain-language guidance for services, offices, records, and city facts.</p></div>
                 <div><span>2</span><h2>Follow official links</h2><p>Go directly to the city government, PSA, or other official source that owns the record.</p></div>
                 <div><span>3</span><h2>Stay informed</h2><p>Use public information to ask better questions and take part in a stronger Tabaco City community.</p></div>

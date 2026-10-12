@@ -53,7 +53,7 @@
     <section class="civic-section civic-section--quick" aria-labelledby="quick-access-title">
         <div class="civic-container">
             <div class="civic-section-intro civic-section-intro--wide">
-                <x-civic.section-heading
+                <x-civic.section-heading heading-id="quick-access-title"
                     title="City information, within reach."
                     description="Essential services, government information, public records, and local resources gathered in one place for a more transparent and connected Tabaco City."
                 />
@@ -107,8 +107,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="local-context-title">
         <div class="civic-container">
-            <x-civic.section-heading title="Start with the local context." description="Good civic information needs a sense of place. These short guides connect current services and records to Tabaco City's history, geography, and culture." />
-            <div class="civic-source-grid" id="local-context-title">
+            <x-civic.section-heading heading-id="local-context-title" title="Start with the local context." description="Good civic information needs a sense of place. These short guides connect current services and records to Tabaco City's history, geography, and culture." />
+            <div class="civic-source-grid">
                 <x-civic.card title="History of Tabaco City" description="Follow the city's documented milestones, cityhood, and the stories that continue to shape local identity." href="{{ route('history') }}" variant="source">
                     <span class="civic-source-label">Read the local history guide</span>
                 </x-civic.card>
@@ -125,7 +125,7 @@
     <section class="civic-section civic-section--closing" aria-labelledby="closing-title">
         <div class="civic-container civic-closing">
             <div>
-                <x-civic.section-heading title="A clearer, more connected Tabaco City." description="BetterTabaco is a starting point: understand the information, then go directly to the official source or office that can help." />
+                <x-civic.section-heading heading-id="closing-title" title="A clearer, more connected Tabaco City." description="BetterTabaco is a starting point: understand the information, then go directly to the official source or office that can help." />
             </div>
             <x-civic.cta href="{{ route('contact') }}#contribute" variant="green">Help keep this guide useful</x-civic.cta>
         </div>

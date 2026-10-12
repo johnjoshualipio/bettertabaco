@@ -22,9 +22,9 @@
     <section class="civic-section" aria-labelledby="festival-overview-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="A celebration with a documented beginning." description="The official tourism page says the Tabak Festival began in 2002, the year after Tabaco became a city under Republic Act No. 9020." />
+                <x-civic.section-heading heading-id="festival-overview-title" title="A celebration with a documented beginning." description="The official tourism page says the Tabak Festival began in 2002, the year after Tabaco became a city under Republic Act No. 9020." />
             </div>
-            <div id="festival-overview-title" class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
+            <div class="space-y-6 text-[0.92rem] leading-7 text-ink-soft">
                 <p>According to the City Government, the festival is an annual celebration of everything Tabaknon. Its program has included street dancing, the Mutya ng Tabak and Tabakla pageants, cultural performances, a trade fair and exhibit, Karawat Bicolnon, Baile de Amor, and community races.</p>
                 <p>The official tourism account describes the Padyak Race as a tribute to the city's everyday padyak drivers and the Sibidan Race as a tradition connected to Tabaco's coastal culture.</p>
                 <a class="civic-text-link" href="{{ config('civic.sources.tourism') }}" target="_blank" rel="noreferrer noopener">Read the official festival overview <x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
@@ -34,8 +34,8 @@
 
     <section class="civic-section civic-section--tint" aria-labelledby="festival-elements-title">
         <div class="civic-container">
-            <x-civic.section-heading title="What the festival brings together." description="These elements come from the city's official tourism description; schedules and specific activities can change between editions." />
-            <div class="civic-source-grid" id="festival-elements-title">
+            <x-civic.section-heading heading-id="festival-elements-title" title="What the festival brings together." description="These elements come from the city's official tourism description; schedules and specific activities can change between editions." />
+            <div class="civic-source-grid">
                 <x-civic.card title="Street dancing and performance" description="A public showcase of rhythm, movement, musicianship, and the creative work of Tabaco's communities." variant="source">
                     <span class="civic-source-label">Official tourism description</span>
                 </x-civic.card>
@@ -52,8 +52,8 @@
     <section class="civic-section" aria-labelledby="festival-context-title">
         <div class="civic-container civic-glance">
             <div>
-                <x-civic.section-heading title="Why the name matters." description="Tabak is more than a festival label in the city's own cultural account." />
-                <p id="festival-context-title" class="mt-6 max-w-xl text-[0.92rem] leading-7 text-ink-soft">The official history page connects the word tabak with the bolo and describes the bolo's place in Tabaco's craft identity. The city's business profile separately identifies handmade tabak and gunting cutlery as a local industry. Together, these sources explain why the festival's name is closely tied to workmanship, place, and local memory.</p>
+                <x-civic.section-heading heading-id="festival-context-title" title="Why the name matters." description="Tabak is more than a festival label in the city's own cultural account." />
+                <p class="mt-6 max-w-xl text-[0.92rem] leading-7 text-ink-soft">The official history page connects the word tabak with the bolo and describes the bolo's place in Tabaco's craft identity. The city's business profile separately identifies handmade tabak and gunting cutlery as a local industry. Together, these sources explain why the festival's name is closely tied to workmanship, place, and local memory.</p>
             </div>
             <div class="civic-aside-note civic-aside-note--green">
                 <div class="civic-rule" aria-hidden="true"></div>
@@ -67,9 +67,9 @@
     <section class="civic-section civic-section--tint" aria-labelledby="festival-sources-title">
         <div class="civic-container civic-split-copy">
             <div>
-                <x-civic.section-heading title="References for this page." description="Open the original public sources for the festival, history, craft, and tourism office context." />
+                <x-civic.section-heading heading-id="festival-sources-title" title="References for this page." description="Open the original public sources for the festival, history, craft, and tourism office context." />
             </div>
-            <div class="civic-link-stack" id="festival-sources-title">
+            <div class="civic-link-stack">
                 <a href="{{ config('civic.sources.tourism') }}" target="_blank" rel="noreferrer noopener"><span>Tabaco City official tourism page</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.about') }}" target="_blank" rel="noreferrer noopener"><span>Tabaco City official history</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>
                 <a href="{{ config('civic.sources.business_profile') }}" target="_blank" rel="noreferrer noopener"><span>Tabaco City official business profile</span><x-civic.icon name="arrow-up-right" class="civic-icon--inline size-4" /></a>

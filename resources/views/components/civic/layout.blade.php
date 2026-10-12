@@ -31,7 +31,7 @@
         <div class="min-h-screen overflow-x-clip">
             <x-civic.emergency-bar />
             <x-civic.navbar />
-            <main id="main-content">{{ $slot }}</main>
+            <main id="main-content" tabindex="-1">{{ $slot }}</main>
             <x-civic.footer />
         </div>
     </body>
